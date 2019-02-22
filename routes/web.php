@@ -11,4 +11,10 @@
 |
 */
 
-Route::get('/test', 'UserController@index');
+// Route::get('/test', 'UserController@index');
+Route::get('/', function()
+{
+  return view('welcome');
+});
+
+Route::resource('/utenti', 'UserController');
